@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* npx tailwindcss -i ./src/input.css -o ./public/output.css --watch */
+
+body {
+  background-color: #FFEADD;
+  background-repeat: no-repeat;
+}
+.container {
+  background: radial-gradient(circle, #A87676, #CA8787, #E1ACAC);
+  border: 2px solid black;
+  border-radius: 5rem;
+    box-shadow: 23px 33px 24px 10px #000B58;
+ 
+}
+
+h2 {
+  background: linear-gradient(to right, #664343, #740938);
+  font-family: "Times New Roman", Times, serif;
+  text-transform: uppercase;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 4rem;
+  margin-left: 8rem;
+  margin-top: 8px;
+  
+}
+/* .container {
+  border-bottom-left-radius: 14px;
+  border-top-left-radius: 14px;
+} */
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 56px;
+}
+.row input {
+  border-radius: 16px;
+  padding: 6px;
+  flex: 1;
+  padding: 9px;
+  margin-left: 38px;
+  margin-right: 109px;
+}
+button {
+ margin-right: 20px;
+    padding: 4px;
+    border-radius: 12px;
+    color: white;
+    background: lightblue;
+    cursor: pointer;
+    width: 5rem;
+    border: none;
+    outline: none;
+    position: relative;
+    z-index: 0;
+    overflow: visible;
+    text-transform: uppercase;
+}
+button::after{
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+button::before{
+   content: "";
+    background: linear-gradient(45deg, #03346E, #003161, #AD49E1, #6A1E55,
+        #76ABAE, #8C3061, #FF204E, #704264);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 8px);
+    height: calc(100% + 8px);
+    filter: blur(8px);
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0.6; /* Lower opacity initially */
+    animation: glowing 20s linear infinite;
+}
+@keyframes glowing{
+    
+    0%{
+        background-position:  0  0;
+     }
+    50% {
+        background-position:  400%  0; 
+    }
+    100% 
+    {
+        background-position:0 0;
+     }
+}
+button:hover::before{
+    opacity: 1;
+}
+button:active::after{
+    background: transparent;
+}
+button:active{
+    color: #000;
+    font-weight: bold;
+}
+
+.task {
+  margin-left: 63px;
+  margin-top: 17px;
+}
+
+.checked {
+  color: black;
+  text-decoration: line-through;
+}
+
+ul li {
+  list-style: none;
+  font-size: 17px;
+  cursor: pointer;
+  padding: 12px 8px 12px 50px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  user-select: none;
+  position: relative;
+  left: 20px;
+  color: white;
+}
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-image: url(../src/images/unchecked.png);
+  background-position: center;
+  background-size: cover;
+  top: 15px;
+  left: 20px;
+  cursor: pointer;
+}
+ul li.check {
+ color: white;
+    text-decoration: line-through;
+    font-family: fantasy;
+    text-transform: uppercase;
+}
+ul li.check::before {
+  background-image: url(../src/images/checked.png);
+}
+ul li span {
+  right: 10rem;
+  position: absolute;
+  font-size: 30px;
+  width: 22px;
+  height: 20px;
+  text-align: center;
+  color: black;
+  top: 8px;
+  line-height: 40px;
+}
+ul li span:hover {
+  color: aliceblue;
+}

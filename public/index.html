@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TO-Do-List</title>
+    <link rel="stylesheet" href="../public/output.css" />
+    <link rel="stylesheet" href="../src/input.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+  <body class="">
+    <div
+      class="container w-[44rem] h-[27rem] border-white border-[2px] mt-[6rem] ml-[28rem]"
+    >
+      <div class="todo">
+        <h2 class="text">To-Do-List</h2>
+        <div class="row">
+          <input type="text" id="inputbox" placeholder="add your task" />
+          <button type="button" onclick="addTask()">add</button>
+        </div>
+      <ul id="listcontainer">
+            <!-- <li class="check">Task 1</li>
+          <li>Task 2</li>
+          <li>Task 3</li>    -->
+        </ul>
+      </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../public/index.js"></script>
+  </body>
+</html>
